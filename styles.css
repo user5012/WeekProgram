@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.schedule-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.day {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex-basis: calc(20% - 40px); /* Adjust for spacing between days */
+    min-width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.day:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ul, div{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+li, textarea{
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+li:last-child, textarea:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 800px) {
+    .day {
+        flex-basis: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .schedule-container {
+        flex-direction: column;
+    }
+
+    .day {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
